@@ -14,7 +14,7 @@ public class Primes {
         double percentage = 0.0;
         double primes = 0;
         //counting how many primes
-        System.out.println("Prime numbers up to " + (arr.length - 1));
+        System.out.println("Prime numbers up to " + (arr.length - 1) + ":");
         for(int i = 0; i < arr.length; i++){
             if(arr[i]){
                 System.out.println(i);
@@ -23,7 +23,7 @@ public class Primes {
         }
         //calculating percentage
         percentage = (primes / (arr.length - 1)) * 100;
-        String endSentence = "There are " + (int) primes + " prime numbers between 2 and " 
+        String endSentence = "There are " + (int) primes + " primes between 2 and " 
         + (arr.length - 1) + " (" +  (int) percentage + "% are primes)";
         return endSentence;
 
