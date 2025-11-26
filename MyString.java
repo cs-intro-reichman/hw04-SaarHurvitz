@@ -13,10 +13,10 @@ public class MyString {
         System.out.println(contains("psychology", "psycho")); // true
         System.out.println(contains("personality", "son")); // true
         System.out.println(contains("personality", "dad")); // false*/
-       // System.out.println(contains("baba yaga", "babayaga"));
+       //System.out.println(contains("baba yaga", "babayaga"));
         System.out.println(contains("baba yaga", "baba"));
         System.out.println(contains("baba yaga", ""));
-        System.out.println(contains("baba yaga", "John Wick is the baba yaga"));
+       System.out.println(contains("baba yaga", "John Wick is the baba yaga"));
         System.out.println(contains("baba yaga", "Yaga"));
         System.out.println(contains("baba yaga", "babayaga"));
     }
@@ -35,39 +35,27 @@ public class MyString {
         return newStr;
     }
 
-    public static String DeleteSpaces(String str){
-        char c = ' ';
-        String newStr = "";
-        for (int i = 0; i < str.length(); i++){
-            c = str.charAt(i);
-            if(c != 32){
-                newStr = newStr + c;
-            }
-            }
-            return newStr;        
-        }
-
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-       if(str1.length() == 0 || str2.length() == 0){
-        return false;
-       }
+       
         if(str1.length() < str2.length()){
             return false; //In this case there's no need to even check this
         }
-        //String newS1 = lowerCase(str1);
-        //String newS2 = lowerCase(str2);
-        String newS1 = DeleteSpaces(str1);
-        String newS2 = DeleteSpaces(str2);
+        if(str2.length() == 0){
+        return true;
+       }
+        String newS1 = str1;
+        String newS2 = str2;
         int stCounter = 0;
         int resetI = 0;
 
         for(int i = 0; i < newS1.length(); i++){
             for(int j = 0; j<newS2.length(); j++){
-               // System.out.println(newS1.charAt(i) + " " + newS2.charAt(j));
+               
                 resetI = i;
-                if(newS1.charAt(i) == newS2. charAt(j)){
+                
+                if(newS1.charAt(i) == newS2.charAt(j)){
                     stCounter++;
                     i++;
                 }
