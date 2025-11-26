@@ -22,7 +22,7 @@ public class Primes {
             }
         }
         //calculating percentage
-        percentage = (primes / (arr.length - 2)) * 100;
+        percentage = (primes / (arr.length - 1)) * 100;
         String endSentence = "There are " + (int) primes + " prime numbers between 2 and " 
         + (arr.length - 1) + " (" +  (int) percentage + "% are primes)";
         return endSentence;
