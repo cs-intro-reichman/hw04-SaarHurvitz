@@ -32,22 +32,26 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-       
+       if(str1.length() == 0 || str2.length() == 0){
+        return false;
+       }
         if(str1.length() < str2.length()){
             return false; //In this case there's no need to even check this
         }
+        String newS1 = str1.toLowerCase();
+        String newS2 = str2.toLowerCase();
         int stCounter = 0;
         
-        for(int i = 0; i < str1.length(); i++){
+        for(int i = 0; i < newS1.length(); i++){
             
-                while (str1.charAt(i) == str2.charAt(stCounter)) {
+                while (newS1.charAt(i) == newS2.charAt(stCounter)) {
                     stCounter++;
                     i++;
                     if(stCounter == str2.length()){
                     return true;
                 }
                 //Making sure I won't reach the limit
-                if(i == str1.length()){
+                if(i == newS1.length()){
                     return false;
                 }
 
